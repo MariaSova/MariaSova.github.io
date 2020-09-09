@@ -1,0 +1,54 @@
+.hero {
+    background: url("../pictures/Батончики.png") left 85% center no-repeat, 
+    url("../pictures/узор.png") right bottom no-repeat;
+    background-color: $blue;
+    height: 100vh;
+    min-height: 650px;
+    color: #fff;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: -40px;
+        left: 2%;
+        content: url("../pictures/Лист\ 3.png");
+    }
+
+    &::after {
+        content: url("../pictures/Ягода\ 2.png");
+        position: absolute;
+        bottom: -40px;
+        right: 2%;
+    }
+
+}
+
+.hero__title-section {
+    width: 46%;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 24px 0 45px;
+    background: url("../img/chocolate.png") right center / 50% auto no-repeat, 
+    url("../pictures/Ягоды\ 1.png") right 200px bottom 100px / auto no-repeat,
+    
+}
+
+
+.hero__main-title {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero__title-desc {
+    font-size: 21px;
+    margin-bottom: 28px;
+    padding-right: 10%;
+}
