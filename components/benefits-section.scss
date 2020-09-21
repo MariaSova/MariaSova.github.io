@@ -1,11 +1,27 @@
 .benefits-section {
     position: relative;
-    background: url("../pictures/узор\ лист.png") left top 57% no-repeat;
+    background: url("../pictures/узорлист.png") left top 57% no-repeat;
+
+    @include tablets {
+        background-position: left rem(-10px) top 10%;
+    }
+
+    @include phones {
+        background: none;
+    }
 
     &:before {
         content: url("../pictures/малина.png");
         position: absolute;
-        bottom: -80px;
+        bottom: rem(-80px);
         left: 0;
+
+        @include tablets {
+            bottom: rem(-150px);
+        }
+
+        @include phones {
+            display: none;
+        }
     }
 }

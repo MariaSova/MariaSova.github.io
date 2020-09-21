@@ -1,0 +1,74 @@
+.socials {
+    display: flex;
+    right: rem(80px);
+    position: absolute;
+    top: rem(42px);
+    width: rem(80px);
+}
+
+.socials__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: rem(10px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.socials__link {
+    display: block;
+    text-decoration: none;
+    width: rem(20px);
+    height: rem(20px);
+    background: center center no-repeat;
+}
+
+
+
+.socials__item--icon--vk {
+    background: url("../icons/css_sprites.png") -180px -180px;
+    opacity: .5;
+    transition: .3s;
+}
+
+.socials__item--icon--vk:hover {
+    background: url("../icons/css_sprites.png") -180px -180px;
+    opacity: 1;
+}
+
+.socials__item--icon--f {
+    width: 150px; height: 150px;
+    background: url('../icons/css_sprites.png') -10px -10px;
+    opacity: .5;
+    transition: .3s;
+}
+
+.socials__item--icon--f:hover {
+    width: 150px; height: 150px;
+    background: url('../icons/css_sprites.png') -10px -10px;
+    opacity: 1;
+}
+
+.socials__item--icon--in {
+    background: url("../icons/css_sprites.png") -180px -10px;
+    opacity: .5;
+    transition: .3s;
+}
+
+.socials__item--icon--in:hover {
+    background: url("../icons/css_sprites.png") -180px -10px;
+    opacity: 1;
+}
+
+.socials__item--icon--tv {
+    background: url("../icons/css_sprites.png") -10px -180px;
+    opacity: .5;
+    transition: .3s;
+}
+
+.socials__item--icon--tv:hover {
+    background: url("../icons/css_sprites.png") -10px -180px;
+    opacity: 1;
+}
