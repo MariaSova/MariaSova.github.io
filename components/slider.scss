@@ -1,0 +1,129 @@
+.cont__section {
+    background: #f8faf9 url(../pictures/Эллипс2.png) 15% 65% no-repeat;
+    position: relative;
+
+    &::after {
+        content: url("../pictures/Лист1.2.png");
+        position: absolute;
+        top: rem(250px);
+        left: 3%;
+    }
+}
+
+.slider__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 960px;
+}
+
+.slider__image {
+    background: url("../pictures/Эллипс.png") 20% 100% no-repeat;
+    width: 50%;
+    position: relative;
+    
+    &::after {
+        content: url("../pictures/Лист1.1.png");
+        position: absolute;
+        bottom: -10%;
+        right: 0;
+    }
+}
+
+.slider__descript {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: rem(30px);
+    margin-right: rem(68px);
+    
+}
+
+.descript__photo {
+    margin-bottom: rem(37px);
+    position: relative;
+    &::after {
+        content: url("../pictures/chocolate-bar.png");
+        position: absolute;
+        top: 20%;
+        left: 5%;
+    }
+}
+
+.content__points {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.content__last {
+    display: block;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+
+.descript__title {
+    font-size: rem(36px);
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: rem(22px);
+    
+}
+
+.descript__content {
+    text-align: left;
+}
+
+.content__text {
+    margin-bottom: rem(43px);
+}
+.content__points {
+    margin-bottom: rem(40px);
+}
+
+.content__points__top {
+    margin-right: rem(55px);
+
+    :last-child {
+        margin-right: 0;
+    }
+}
+.content__points__bold {
+    font-weight: bold;
+    color: #000;
+}
+
+.content__last__price {
+    font-size: rem(60px);
+    font-weight: lighter;
+    margin-right: rem(31px);
+}
+
+
+
+.slider {
+    display: flex;
+    width: 960px;
+    overflow: hidden;
+    margin: 0 rem(10px);
+}
+
+.items {
+    display: flex;
+    position: relative;
+    right: 0;
+    transition: right .5s;
+}
+
