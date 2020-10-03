@@ -34,11 +34,40 @@
                             <span class="phone-number__text">8 800 903 90 90</span>
 
                         </a>
-                        <a href="" class="hamburger">
-                            <span class="hamburger__plank"></span>
-                            <span class="hamburger__plank"></span>
-                            <span class="hamburger__plank"></span>
-                        </a>
+
+                        <div class="dropdown__hamb">
+                            <a href="#" class="dropdown__hamburger">
+                                <span class="hamburger__plank"></span>
+                                <span class="hamburger__plank"></span>
+                                <span class="hamburger__plank"></span>
+                            </a>
+
+                            <div class="dropdown__hamb__menu">
+                                <ul class="dropdown__ham__list">
+                                    <li class="dropdown__ham__item">
+                                        <a href="#" class="menu__link"> О нас </a>
+                                    </li>
+                                    <li class="dropdown__ham__item">
+                                        <a href="#" class="menu__link"> Батончики </a>
+                                    </li>
+                                    <li class="dropdown__ham__item">
+                                        <a href="#" class="menu__link"> Команда </a>
+                                    </li>
+                                    <li class="dropdown__ham__item">
+                                        <a href="#" class="menu__link"> Меню </a>
+                                    </li>
+                                    <li class="dropdown__ham__item">
+                                        <a href="#" class="menu__link"> Отзывы </a>
+                                    </li>
+                                    <li class="dropdown__ham__item">
+                                        <a href="#" class="menu__link"> Как мы работаем </a>
+                                    </li>
+                                    <li class="dropdown__ham__item">
+                                        <a href="#" class="menu__link"> Контакты </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
 
                     </header>
@@ -135,11 +164,14 @@
             </section>
 
             <section class="section cont__section">
-                <div class="container">
-                    <div class="slider__container">
+                
+                <div class="slide-wrapp">
+                    <div class="btn-prev">
                         <a href="#" class="arrow" id="left">
                             <img src="./pictures/arrow-scroll-left.png" alt="" class="arrow">
                         </a>
+                    </div>
+                    <div class="container">
                         <div class="slider">
                             <ul class="items" id="items">
                                 <li class="item">
@@ -147,9 +179,60 @@
                                         <img src="./pictures/Батончики2.png" alt="" class="slider__img">
                                     </div>
                                     <div class="slider__descript">
-                                        <div class="descript__photo">
-                                            <img src="./pictures/Rounded.png" alt="" class="descript__img">
+                                        <div class="dropdown">  
+                                            <a href="#" class="dropdown__link"> 
+                                                <img src="./pictures/Rounded.png" alt="" class="descript__img"> 
+                                            </a>
+                                            <div class="dropdown__menu">
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__item">
+                                                        <img src="./pictures/grape.png" alt="grape" class="dropdown__picture">
+                                                            
+                                                        <div class="dropdown__text">Виноград</div>
+                                                        <div class="dropdown__weight">25г</div>
+                                                            
+                                                            
+                                                    </li>
+                                                    <li class="dropdown__item">
+                                                        <img src="./pictures/nut.png" alt="nut" class="dropdown__picture">
+                                                            
+                                                        <div class="dropdown__text">Грецкий орех</div>
+                                                        <div class="dropdown__weight">32г</div>
+                                                            
+                                                    </li>
+                                                    <li class="dropdown__item">
+                                                        <img src="./pictures/almond.png" alt="almond" class="dropdown__picture">
+                                                            
+                                                        <div class="dropdown__text">Куржутное семя</div>
+                                                        <div class="dropdown__weight">20г</div>
+                                                            
+                                                    </li>
+                                                    <li class="dropdown__item">
+                                                        <img src="./pictures/milk.png" alt="milk" class="dropdown__picture">
+                                                            
+                                                        <div class="dropdown__text">Сухое молоко</div>
+                                                        <div class="dropdown__weight">10г</div>
+                                                            
+                                                    </li>
+                                                    <li class="dropdown__item">
+                                                        <img src="./pictures/sugar.png" alt="sugar" class="dropdown__picture">
+                                                            
+                                                        <div class="dropdown__text">Зам. сахара</div>
+                                                        <div class="dropdown__weight">4г</div>
+                                                            
+                                                    </li>
+                                                    <li class="dropdown__item">
+                                                        <img src="./pictures/beans.png" alt="beans" class="dropdown__picture">
+                                                            
+                                                        <div class="dropdown__text">Какао бобы</div>
+                                                        <div class="dropdown__weight">4г</div>
+                                                            
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
+
+
                                         <h3 class="descript__title">Батончик "морские водоросли"</h3>
                                         <div class="descript__content">
                                             <div class="content__text">
@@ -241,13 +324,14 @@
 
                             </ul>
                         </div>
+                    </div>
+                    <div class="btn-next">
                         <a href="#" class="arrow" id="right">
                             <img src="./pictures/arrow-scroll-right.png" alt="" class="arrow">
                         </a>
                     </div>
-
-                    <script src="./slider.js"></script>
                 </div>
+                <script src="./slider.js"></script>
             </section>
 
 
