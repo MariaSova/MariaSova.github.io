@@ -1,6 +1,9 @@
 .cont__section {
-    background: #f8faf9 url(../pictures/Эллипс2.png) 15% 65% no-repeat;
+    display: flex;
+    flex: 1;
+    background: #f8faf9;
     position: relative;
+    min-width: 100vh;
 
     &::after {
         content: url("../pictures/Лист1.2.png");
@@ -14,32 +17,70 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    .bx-wrapper {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
 }
 
-.btn-prev {
+
+.product-slider__arrow {
+    background: url("../icons/arrow.svg") center center no-repeat;
+    background-size: contain;
+    display: block;
+    width: rem(13px);
+    height: rem(28px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+
+    &--direction--next {
+        right: rem(56px);
+
+    }
+
+    &--direction--prev {
+        left: rem(56px);
+        transform: rotate(-180deg);
+    }
+
+}
+
+
+.products-slider {
+    display: flex;
+    width: rem(960px);
+    overflow: hidden;
+    margin: 0 rem(10px);
+}
+
+.products {
+    display: flex;
+    position: relative;
+    right: 0;
+    transition: .5s;
+}
+
+.product {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: rem(56px);
-}
+    width: rem(960px);
 
-.btn-next {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: rem(56px);
 }
 
 
-.item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 960px;
-}
 
-.slider__image {
-    background: url("../pictures/Эллипс.png") 20% 100% no-repeat;
+
+
+.product__image {
+    background: url("../pictures/Эллипс.png") 20% 100% no-repeat,
+    url(../pictures/Эллипс2.png) 30% 100% no-repeat;
     width: 50%;
     position: relative;
     
@@ -49,16 +90,30 @@
         bottom: -10%;
         right: 0;
     }
+
+}
+.product__container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.slider__descript {
-    width: 50%;
+.product__descript {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 50%;
     margin-left: rem(30px);
     margin-right: rem(68px);
-    
 }
 
 
@@ -69,7 +124,6 @@
 }
 
 .content__last {
-    display: block;
     display: flex;
     align-items: center;
     flex: 1;
@@ -116,23 +170,10 @@
 
 
 
-.slider {
-    display: flex;
-    width: 960px;
-    overflow: hidden;
-    margin: 0 rem(10px);
-}
 
-.items {
-    display: flex;
-    position: relative;
-    right: 0;
-    transition: right .5s;
-}
 
-.cont__section {
-    min-width: 100vh;
-}
+
+
 
 
 
@@ -142,12 +183,17 @@
     position: relative;
     width: rem(90px);
     height: rem(90px);
+    
 
     &::after {
         content: url("../pictures/chocolate-bar.png");
         position: absolute;
-        top: 15%;
-        left: 20%;
+        top: 8%;
+        left: 22%;
+    }
+
+    @include tablets {
+        display: none;
     }
 }
 
@@ -251,4 +297,23 @@
     justify-content: space-between;
     align-items: flex-start;
     right: 0;
+}
+
+
+.btn__dropdown {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn__dropdown__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: rem(8px) rem(20px);
+    color: #fff;
+    font-size: rem(14px);
+    font-weight: bold;
+    text-transform: uppercase;
 }
