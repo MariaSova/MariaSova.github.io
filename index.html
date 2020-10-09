@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial scale=1">
     <title>CHOCCO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./components/main.css">
 </head>
 
@@ -166,176 +168,444 @@
             <section class="section cont__section">
                 
                 <div class="slide-wrapp">
-                    <div class="btn-prev">
-                        <a href="#" class="arrow" id="left">
-                            <img src="./pictures/arrow-scroll-left.png" alt="" class="arrow">
-                        </a>
+
+                    <div class="product-slider__arrows">
+                        <a href="#" class="product-slider__arrow product-slider__arrow--direction--prev"></a>
+                        <a href="#" class="product-slider__arrow product-slider__arrow--direction--next"></a>
                     </div>
+
+
                     <div class="container">
-                        <div class="slider">
-                            <ul class="items" id="items">
-                                <li class="item">
-                                    <div class="slider__image">
-                                        <img src="./pictures/Батончики2.png" alt="" class="slider__img">
-                                    </div>
-                                    <div class="slider__descript">
-                                        <div class="dropdown">  
-                                            <a href="#" class="dropdown__link"> 
-                                                <img src="./pictures/Rounded.png" alt="" class="descript__img"> 
-                                            </a>
-                                            <div class="dropdown__menu">
-                                                <ul class="dropdown__list">
-                                                    <li class="dropdown__item">
-                                                        <img src="./pictures/grape.png" alt="grape" class="dropdown__picture">
-                                                            
-                                                        <div class="dropdown__text">Виноград</div>
-                                                        <div class="dropdown__weight">25г</div>
-                                                            
-                                                            
-                                                    </li>
-                                                    <li class="dropdown__item">
-                                                        <img src="./pictures/nut.png" alt="nut" class="dropdown__picture">
-                                                            
-                                                        <div class="dropdown__text">Грецкий орех</div>
-                                                        <div class="dropdown__weight">32г</div>
-                                                            
-                                                    </li>
-                                                    <li class="dropdown__item">
-                                                        <img src="./pictures/almond.png" alt="almond" class="dropdown__picture">
-                                                            
-                                                        <div class="dropdown__text">Куржутное семя</div>
-                                                        <div class="dropdown__weight">20г</div>
-                                                            
-                                                    </li>
-                                                    <li class="dropdown__item">
-                                                        <img src="./pictures/milk.png" alt="milk" class="dropdown__picture">
-                                                            
-                                                        <div class="dropdown__text">Сухое молоко</div>
-                                                        <div class="dropdown__weight">10г</div>
-                                                            
-                                                    </li>
-                                                    <li class="dropdown__item">
-                                                        <img src="./pictures/sugar.png" alt="sugar" class="dropdown__picture">
-                                                            
-                                                        <div class="dropdown__text">Зам. сахара</div>
-                                                        <div class="dropdown__weight">4г</div>
-                                                            
-                                                    </li>
-                                                    <li class="dropdown__item">
-                                                        <img src="./pictures/beans.png" alt="beans" class="dropdown__picture">
-                                                            
-                                                        <div class="dropdown__text">Какао бобы</div>
-                                                        <div class="dropdown__weight">4г</div>
-                                                            
-                                                    </li>
-                                                </ul>
-                                            </div>
+                        <div class="products-slider">
+                            <ul class="products">
+                                <li class="products__item product">
+                                    <div class="product__container">
+                                        <div class="product__image">
+                                            <img src="./pictures/Батончики2.png" alt="" class="product__img">
                                         </div>
-
-
-                                        <h3 class="descript__title">Батончик "морские водоросли"</h3>
-                                        <div class="descript__content">
-                                            <div class="content__text">
-                                                Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                        
+                                        <div class="product__descript">
+                                            <div class="dropdown">  
+                                                    <a href="#" class="dropdown__link"> 
+                                                        <div class="btn__dropdown">
+                                                            <img src="./pictures/Rounded.png" alt="" class="descript__img">
+                                                            <div class="btn__dropdown__title">состав</div>
+                                                        </div> 
+                                                    </a>
+                                                    <div class="dropdown__menu">
+                                                        <ul class="dropdown__list">
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/grape.png" alt="grape" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Виноград</div>
+                                                                <div class="dropdown__weight">25г</div>
+                                                                    
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/nut.png" alt="nut" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Грецкий орех</div>
+                                                                <div class="dropdown__weight">32г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/almond.png" alt="almond" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Куржутное семя</div>
+                                                                <div class="dropdown__weight">20г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/milk.png" alt="milk" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Сухое молоко</div>
+                                                                <div class="dropdown__weight">10г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/sugar.png" alt="sugar" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Зам. сахара</div>
+                                                                <div class="dropdown__weight">4г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/beans.png" alt="beans" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Какао бобы</div>
+                                                                <div class="dropdown__weight">4г</div>
+                                                                    
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                             </div>
-                                            <div class="content__points">
-                                                <div class="content__points__top">
-                                                    Калорийность 
-                                                    <div class="content__points__bold">120 ккал</div>
+                                            <h3 class="descript__title">Батончик "гранола виноград"</h3>
+                                            <div class="descript__content">
+                                                <div class="content__text">
+                                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
                                                 </div>
-                                                <div class="content__points__top">
-                                                    Вес 
-                                                    <div class="content__points__bold">98 грамм</div>
+                                                <div class="content__points">
+                                                    <div class="content__points__top">
+                                                        Калорийность 
+                                                        <div class="content__points__bold">120 ккал</div>
+                                                    </div>
+                                                    <div class="content__points__top">
+                                                        Вес 
+                                                        <div class="content__points__bold">98 грамм</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="content__last">
-                                                <div class="content__last__price">
-                                                    140 Р
-                                                </div>
-                                                <div class="content__last__btn">
-                                                    <input type="submit" value="Заказать" class="btn btn--theme--green">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="item">
-                                    <div class="slider__image">
-                                        <img src="./pictures/Батончики2.png" alt="" class="slider__img">
-                                    </div>
-                                    <div class="slider__descript">
-                                        <div class="descript__photo">
-                                            <img src="./pictures/Rounded.png" alt="" class="descript__img">
-                                        </div>
-                                        <h3 class="descript__title">Батончик "морские водоросли"</h3>
-                                        <div class="descript__content">
-                                            <div class="content__text">
-                                                Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
-                                            </div>
-                                            <div class="content__points">
-                                                <div class="content__points__top">
-                                                    Калорийность 
-                                                    <div class="content__points__bold">120 ккал</div>
-                                                </div>
-                                                <div class="content__points__top">
-                                                    Вес 
-                                                    <div class="content__points__bold">98 грамм</div>
-                                                </div>
-                                            </div>
-                                            
-
-
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="slider__image">
-                                        <img src="./pictures/Батончики2.png" alt="" class="slider__img">
-                                    </div>
-                                    <div class="slider__descript">
-                                        <div class="descript__photo">
-                                            <img src="./pictures/Rounded.png" alt="" class="descript__img">
-                                        </div>
-                                        <h3 class="descript__title">Батончик "морские водоросли"</h3>
-                                        <div class="descript__content">
-                                            <div class="content__text">
-                                                Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
-                                            </div>
-                                            <div class="content__points">
-                                                <div class="content__points__top">
-                                                    Калорийность 
-                                                    <div class="content__points__bold">120 ккал</div>
-                                                </div>
-                                                
-
-                                            </div>
-                                            <div class="content__last">
-                                                <div class="content__last__price">
-                                                    140 Р
-                                                </div>
-                                                <div class="content__last__btn">
-                                                    <input type="submit" value="Заказать" class="btn btn--theme--green">
+                                                <div class="content__last">
+                                                    <div class="content__last__price">
+                                                        140 Р
+                                                    </div>
+                                                    <div class="content__last__btn">
+                                                        <input type="submit" value="Заказать" class="btn btn--theme--green">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-
+                                <li class="products__item product">
+                                    <div class="product__container">
+                                        <div class="product__image">
+                                            <img src="./pictures/Батончики2.png" alt="" class="product__img">
+                                        </div>
+                                        
+                                        <div class="product__descript">
+                                           
+                                            <h3 class="descript__title">Батончик "гранола виноград"</h3>
+                                            <div class="descript__content">
+                                                <div class="content__text">
+                                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                                </div>
+                                                <div class="content__points">
+                                                    <div class="content__points__top">
+                                                        Калорийность 
+                                                        <div class="content__points__bold">120 ккал</div>
+                                                    </div>
+                                                    <div class="content__points__top">
+                                                        Вес 
+                                                        <div class="content__points__bold">98 грамм</div>
+                                                    </div>
+                                                </div>
+                                                <div class="content__last">
+                                                    <div class="content__last__price">
+                                                        140 Р
+                                                    </div>
+                                                    <div class="content__last__btn">
+                                                        <input type="submit" value="Заказать" class="btn btn--theme--green">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products__item product">
+                                    <div class="product__container">
+                                        <div class="product__image">
+                                            <img src="./pictures/Батончики2.png" alt="" class="product__img">
+                                        </div>
+                                        
+                                        <div class="product__descript">
+                                            <div class="dropdown">  
+                                                    <a href="#" class="dropdown__link"> 
+                                                        <div class="btn__dropdown">
+                                                            <img src="./pictures/Rounded.png" alt="" class="descript__img">
+                                                            <div class="btn__dropdown__title">состав</div>
+                                                        </div> 
+                                                    </a>
+                                                    <div class="dropdown__menu">
+                                                        <ul class="dropdown__list">
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/grape.png" alt="grape" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Виноград</div>
+                                                                <div class="dropdown__weight">25г</div>
+                                                                    
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/nut.png" alt="nut" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Грецкий орех</div>
+                                                                <div class="dropdown__weight">32г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/almond.png" alt="almond" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Куржутное семя</div>
+                                                                <div class="dropdown__weight">20г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/milk.png" alt="milk" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Сухое молоко</div>
+                                                                <div class="dropdown__weight">10г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/sugar.png" alt="sugar" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Зам. сахара</div>
+                                                                <div class="dropdown__weight">4г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/beans.png" alt="beans" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Какао бобы</div>
+                                                                <div class="dropdown__weight">4г</div>
+                                                                    
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            </div>
+                                            <h3 class="descript__title">Батончик "гранола виноград"</h3>
+                                            <div class="descript__content">
+                                                <div class="content__text">
+                                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                                </div>
+                                                <div class="content__points">
+                                                    <div class="content__points__top">
+                                                        Калорийность 
+                                                        <div class="content__points__bold">120 ккал</div>
+                                                    </div>
+                                                    <div class="content__points__top">
+                                                        Вес 
+                                                        <div class="content__points__bold">98 грамм</div>
+                                                    </div>
+                                                </div>
+                                                <div class="content__last">
+                                                    <div class="content__last__price">
+                                                        140 Р
+                                                    </div>
+                                                    <div class="content__last__btn">
+                                                        <input type="submit" value="Заказать" class="btn btn--theme--green">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products__item product">
+                                    <div class="product__container">
+                                        <div class="product__image">
+                                            <img src="./pictures/Батончики2.png" alt="" class="product__img">
+                                        </div>
+                                        
+                                        <div class="product__descript">
+                                            <div class="dropdown">  
+                                                    <a href="#" class="dropdown__link"> 
+                                                        <div class="btn__dropdown">
+                                                            <img src="./pictures/Rounded.png" alt="" class="descript__img">
+                                                            <div class="btn__dropdown__title">состав</div>
+                                                        </div> 
+                                                    </a>
+                                                    <div class="dropdown__menu">
+                                                        <ul class="dropdown__list">
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/grape.png" alt="grape" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Виноград</div>
+                                                                <div class="dropdown__weight">25г</div>
+                                                                    
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/nut.png" alt="nut" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Грецкий орех</div>
+                                                                <div class="dropdown__weight">32г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/almond.png" alt="almond" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Куржутное семя</div>
+                                                                <div class="dropdown__weight">20г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/milk.png" alt="milk" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Сухое молоко</div>
+                                                                <div class="dropdown__weight">10г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/sugar.png" alt="sugar" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Зам. сахара</div>
+                                                                <div class="dropdown__weight">4г</div>
+                                                                    
+                                                            </li>
+                                                            <li class="dropdown__item">
+                                                                <img src="./pictures/beans.png" alt="beans" class="dropdown__picture">
+                                                                    
+                                                                <div class="dropdown__text">Какао бобы</div>
+                                                                <div class="dropdown__weight">4г</div>
+                                                                    
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            </div>
+                                            <h3 class="descript__title">Батончик "гранола виноград"</h3>
+                                            <div class="descript__content">
+                                                <div class="content__text">
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia nostrum ipsa cupiditate dolorem fugiat ipsam eveniet hic, vel ratione, quod aut voluptatum, porro optio sunt amet commodi accusamus similique expedita.
+                                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                                </div>
+                                                <div class="content__points">
+                                                    <div class="content__points__top">
+                                                        Калорийность 
+                                                        <div class="content__points__bold">120 ккал</div>
+                                                    </div>
+                                                    <div class="content__points__top">
+                                                        Вес 
+                                                        <div class="content__points__bold">98 грамм</div>
+                                                    </div>
+                                                </div>
+                                                <div class="content__last">
+                                                    <div class="content__last__price">
+                                                        140 Р
+                                                    </div>
+                                                    <div class="content__last__btn">
+                                                        <input type="submit" value="Заказать" class="btn btn--theme--green">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="btn-next">
-                        <a href="#" class="arrow" id="right">
-                            <img src="./pictures/arrow-scroll-right.png" alt="" class="arrow">
-                        </a>
-                    </div>
+
                 </div>
-                <script src="./slider.js"></script>
             </section>
 
 
 
+
+            <section class="section team-section">
+                <div class="container">
+                    <div class="section__title">Команда</div>
+                    <ul class="team team--version--desktop">
+                        <li class="team__item">
+                            <div class="team__member">
+                                <img src="./pictures/man1.png" alt="man1" class="team__member-icon">
+                            </div>
+                            <button class="team__title" type="button">Борис Федорович</button>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member__pro">Оператор</div>
+                                    <div class="team__member__description">С радостью поможет подобрать батончики и оформить заказ</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__member">
+                                <img src="./pictures/girl1.png" alt="girl1" class="team__member-icon">
+                            </div>
+                            <button class="team__title" type="button">Алла Иванова</button>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member__pro">Оператор</div>
+                                    <div class="team__member__description">С радостью поможет подобрать батончики и оформить заказ</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__member">
+                                <img src="./pictures/man2.png" alt="man2" class="team__member-icon">
+                            </div>
+                            <button class="team__title" type="button">Кирилл Матросов</button>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member__pro">Оператор</div>
+                                    <div class="team__member__description">С радостью поможет подобрать батончики и оформить заказ</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <div class="team__member">
+                                <img src="./pictures/girl2.png" alt="girl2" class="team__member-icon">
+                            </div>
+                            <button class="team__title" type="button">Мила Рыжкова</button>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member__pro">Оператор</div>
+                                    <div class="team__member__description">С радостью поможет подобрать батончики и оформить заказ</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <ul class="team team--version--phone">
+                        <li class="team__item">
+                            <button class="team__title" type="button">Борис Федорович</button>
+                            <div class="team__content" style="height: 0px;">
+                                <div class="team__content-block">
+                                    <div class="team__member">
+                                        <img src="./pictures/man1.png" alt="man1" class="team__member-icon">
+                                    </div>
+                                    <div class="team__member__pro">Оператор</div>
+                                    <div class="team__member__description">С радостью поможет подобрать батончики и оформить заказ</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <button class="team__title" type="button">Алла Иванова</button>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member">
+                                        <img src="./pictures/girl1.png" alt="girl1" class="team__member-icon">
+                                    </div>
+                                    <div class="team__member__pro">Оператор</div>
+                                    <div class="team__member__description">С радостью поможет подобрать батончики и оформить заказ</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <button class="team__title" type="button">Кирилл Матросов</button>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member">
+                                        <img src="./pictures/man2.png" alt="man2" class="team__member-icon">
+                                    </div>
+                                    <div class="team__member__pro">Оператор</div>
+                                    <div class="team__member__description">С радостью поможет подобрать батончики и оформить заказ</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item">
+                            <button class="team__title" type="button">Мила Рыжкова</button>
+                            <div class="team__content">
+                                <div class="team__content-block">
+                                    <div class="team__member">
+                                        <img src="./pictures/girl2.png" alt="girl2" class="team__member-icon">
+                                    </div>
+                                    <div class="team__member__pro">Оператор</div>
+                                    <div class="team__member__description">С радостью поможет подобрать батончики и оформить заказ</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+                </div>
+            </section>
+            <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity=""
+            crossorigin="anonymous"></script>
+            <script src="./acco.js"></script>
 
 
             <section class="section reviews-section">
@@ -343,56 +613,96 @@
                     <h2 class="section__title">Отзывы</h2>
                     <div class="reviews">
                         <div class="reviews__display">
-                            <div class="reviews__display-inner">
-                                <div class="reviews__avatar">
-                                    <img src="./reviews/photo1.jpg" alt="" class="reviews__avatar-img">
-                                </div>
-                                <article class="reviews__content">
-                                    <h3 class="reviews__title">Лучший перекус</h3>
-                                    <div class="reviews__text">
-                                        <p>
-                                            Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик - он всегда под рукой. Это приятно и удобно. 
-                                        </p>
+                            <ul class="reviews__list">
+                                <li class="reviews__item reviews__item--active" data-linked-with="one">
+                                    <div class="reviews__display-inner">
+                                        <div class="reviews__avatar">
+                                            <img src="./reviews/photo1.jpg" alt="" class="reviews__avatar-img">
+                                        </div>
+                                        <article class="reviews__content">
+                                            <h3 class="reviews__title">Лучший перекус</h3>
+                                            <div class="reviews__text">
+                                                <p>
+                                                    Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик - он всегда под рукой. Это приятно и удобно. 
+                                                </p>
+                                            </div>
+                                            <div class="reviews__author">Алёна Хмельницкая</div>
+                                        </article>
                                     </div>
-                                    <div class="reviews__author">Алёна Хмельницкая</div>
-                                </article>
-                            </div>
+                                </li>
+                                <li class="reviews__item" data-linked-with="two">
+                                    <div class="reviews__display-inner">
+                                        <div class="reviews__avatar">
+                                            <img src="./reviews/photo3.jpg" alt="" class="reviews__avatar-img">
+                                        </div>
+                                        <article class="reviews__content">
+                                            <h3 class="reviews__title">Лучший перекус 2</h3>
+                                            <div class="reviews__text">
+                                                <p>
+                                                    Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик - он всегда под рукой. Это приятно и удобно. 
+                                                </p>
+                                            </div>
+                                            <div class="reviews__author">Алёна Хмельницкая</div>
+                                        </article>
+                                    </div>
+                                </li>
+                                <li class="reviews__item" data-linked-with="three">
+                                    <div class="reviews__display-inner">
+                                        <div class="reviews__avatar">
+                                            <img src="./reviews/photo2.jpg" alt="" class="reviews__avatar-img">
+                                        </div>
+                                        <article class="reviews__content">
+                                            <h3 class="reviews__title">Лучший перекус 3</h3>
+                                            <div class="reviews__text">
+                                                <p>
+                                                    Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик - он всегда под рукой. Это приятно и удобно. 
+                                                    Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик - он всегда под рукой. Это приятно и удобно. 
+                                                    Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик - он всегда под рукой. Это приятно и удобно. 
+                                                </p>
+                                            </div>
+                                            <div class="reviews__author">Алёна Хмельницкая</div>
+                                        </article>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                         
                         <ul class="reviews__switcher">
-                            <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
-                                <a href="#" class="interactive-avatar__link">
-                                    <img src="./reviews/photo1.jpg" alt="black hair girl" class="interactive-avatar__img">
+                            <li class="reviews-switcher__item interactive-avatar interactive-avatar--active">
+                                <a href="#" class="reviews-switcher__link" data-open="one">
+                                    <img src="./reviews/photo1.jpg" alt="black hair girl" class="reviews-switcher__pic">
                                 </a>
                             </li>
-                            <li class="reviews__switcher-item interactive-avatar">
-                                <a href="#" class="interactive-avatar__link">
-                                    <img src="./reviews/photo3.jpg" alt="red hair girl" class="interactive-avatar__img">
+                            <li class="reviews-switcher__item interactive-avatar">
+                                <a href="#" class="reviews-switcher__link" data-open="two">
+                                    <img src="./reviews/photo3.jpg" alt="red hair girl" class="reviews-switcher__pic">
                                 </a>
                             </li>
-                            <li class="reviews__switcher-item interactive-avatar">
-                                <a href="#" class="interactive-avatar__link">
-                                    <img src="./reviews/photo2.jpg" alt="boy" class="interactive-avatar__img">
+                            <li class="reviews-switcher__item interactive-avatar">
+                                <a href="#" class="reviews-switcher__link" data-open="three">
+                                    <img src="./reviews/photo2.jpg" alt="boy" class="reviews-switcher__pic">
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
+                <script src="./tabs.js"></script>
             </section>
 
             <section class="section order-section section--font-color--green">
                 <div class="container">
                     <h2 class="section__title">Закажите доставку</h2>
                     <form class="form">
+                        <input type="hidden" name="to" value="somewhere@mail.com">
                         <div class="form__col">
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="name" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Телефон</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="phone" class="form__input">
                                 </label>
                             </div>
                             <div class="form__row">
@@ -425,6 +735,7 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Комментарий</div>
+                                    <input type="text" name="comment" class="form__input">
                                     <textarea class="form__input form__input--textarea"></textarea>
                                 </label>
                             </div>
@@ -455,6 +766,21 @@
                     </form>
                 </div>
             </section>
+
+            <div id="modal" class="modal fancybox-content">
+                <div class="modal__container">
+                    <div class="modal__content">
+                        Сообщение отправлено
+                    </div>
+                    <div class="modal__button-container">
+                        <a href="#" class="btn app-submit-btn btn--theme--green">Закрыть</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
 
             <section class="section map-section">
                 <div id="map">
@@ -509,5 +835,13 @@
             <li class="fixed-menu__item"> <a href="" class="fixed-menu__link"></a></li>
         </ul>
     </nav>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./slider1.js"></script>
+    <script src="./modal.js"></script>
+
 </body>
 </html>
