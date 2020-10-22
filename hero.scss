@@ -1,0 +1,122 @@
+.hero {
+    background: url("../pictures/узор.png") right bottom no-repeat;
+    background-color: $blue;
+    height: 100vh;
+    min-height: rem(650px);
+    color: #fff;
+    position: relative;
+
+    @include tablets {
+        background-position: right bottom 88%;
+    }
+
+
+    &:before, &:after {
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        bottom: rem(-40px);
+        left: 2%;
+        content: url("../pictures/Лист\ 3.png");
+    }
+
+    &::after {
+        content: url("../pictures/Ягода\ 2.png");
+        position: absolute;
+        bottom: rem(-40px);
+        right: 2%;
+    }
+
+}
+
+.hero__title-section {
+    width: 46%;
+
+    @include tablets {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &:before {
+            content: "";
+            width: rem(316px);
+            height: rem(330px);
+            background: url(../pictures/Батончикикопия.png) center center / contain no-repeat;
+            margin-bottom: rem(16px);
+        }
+    }
+}
+
+.hero__icons-section {
+    @include tablets {
+        display: none;
+    }
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: rem(24px) 0 rem(45px);
+    background: url("../pictures/Батончики.png") left 78% center no-repeat, url("../pictures/Ягоды\ 1.png") right rem(200px) bottom rem(100px) / auto no-repeat;
+
+    @include tablets {
+        background: none;
+    }
+
+
+    &:before, &:after {
+        @include tablets {
+            display: none;
+        }
+    }
+
+
+    &::before {
+        content: url(../pictures/Лист1.png);
+        position: absolute;
+        bottom: rem(150px);
+        right: rem(-150px);
+    }
+
+    &::after {
+        content: url(../pictures/Лист2.png);
+        position: absolute;
+        bottom: rem(-40px);
+        right: rem(50px);
+    }
+}
+
+
+.hero__main-title {
+    font-size: rem(48px);
+    line-height: 1.1;
+    font-weight: bold;
+    margin-bottom: rem(15px);
+    text-transform: uppercase;
+}
+
+.hero__title-desc {
+    font-size: rem(21px);
+    margin-bottom: rem(28px);
+    padding-right: 10%;
+
+    @include tablets {
+        padding: 0 25%;
+    }
+
+    @include phones {
+        padding: 0 16%;
+    }
+}
+
+
