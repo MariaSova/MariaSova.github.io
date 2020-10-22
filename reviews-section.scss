@@ -1,0 +1,19 @@
+.reviews-section {
+    position: relative;
+    background: url("../pictures/Узор\ 4.png") left 0 bottom rem(-100px) no-repeat;
+
+    
+    &:before {
+        content: url("../pictures/Ягода\ 4.png");
+        position: absolute;
+        right: 2%;
+        top: rem(20px);
+    }
+
+    &:after {
+        content: url("../pictures/Ягоды.png");
+        position: absolute;
+        bottom: rem(-40px);
+        left: 0;
+    }
+}

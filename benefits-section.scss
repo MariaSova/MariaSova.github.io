@@ -1,0 +1,12 @@
+.benefits-section {
+    position: relative;
+    background: url("../pictures/узорлист.png") left top 57% no-repeat, url("../pictures/малина.png") left bottom 40% no-repeat;
+
+    @include tablets {
+        background-position: left rem(-10px) top 10%;
+    }
+
+    @include phones {
+        background: none;
+    }
+}
